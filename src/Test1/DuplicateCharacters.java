@@ -1,10 +1,12 @@
 package Test1;
 
+import java.util.HashMap;
+
 public class DuplicateCharacters {    
     public static void main(String[] args) {    
        String string1 = "Great responsibility";    
        int count;    
-           
+          HashMap strr=new HashMap();
        //Converts given string into character array    
        char string[] = string1.toCharArray();    
        System.out.println("Duplicate characters in a given string: ");    
@@ -20,8 +22,10 @@ public class DuplicateCharacters {
            }    
            //A character is considered as duplicate if count is greater than 1    
            if(count > 1 && string[i] != '0')    
-               System.out.println(string[i]);    
-       }    
+               System.out.println(string[i]+"   "+count);  
+           strr.put(string[i], count);
+           
+       }   System.out.println(strr); 
    }    
 }     
 
